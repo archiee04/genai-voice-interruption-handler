@@ -29,7 +29,7 @@ Agent speaking + “yeah” | Agent continues speaking |
 Agent speaking + “stop” | Agent speech stops immediately |
 Agent silent + user input | Input handled normally |
 
-Project Structure
+## Project Structure
 
 agent/
 ├── state.py
@@ -41,6 +41,7 @@ config/
 ├── settings.py
 main.py
 
+
 Why This Approach Works
 - Avoids modifying VAD or STT internals
 - Adds no additional latency beyond STT processing
@@ -48,9 +49,11 @@ Why This Approach Works
 - Clean separation of signal detection and semantic decision-making
 
 Summary
+
 This project demonstrates a practical Gen AI systems design approach to handle real time conversational interruptions using intent aware logic rather than raw signal detection.
 
 Running the Demo
+
 ```bash
 python main.py
 
@@ -58,6 +61,7 @@ Expected output:
 
 [AGENT] Speaking...
 [AGENT] Speech stopped.
+
 
 
 
