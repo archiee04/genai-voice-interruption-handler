@@ -37,21 +37,17 @@ Agent silent + user input | Input handled normally |
 ---
 
 ## Project Structure
-
+```
 agent/
-├── state.py # Tracks agent speaking state
-├── vad_handler.py # Handles VAD events
-├── stt_handler.py # Processes STT results
-├── interrupt_logic.py # Semantic intent detection
-├── tts_handler.py # Agent audio control
+├── state.py            # Tracks agent speaking state
+├── vad_handler.py      # Handles VAD events
+├── stt_handler.py      # Processes STT results
+├── interrupt_logic.py  # Semantic intent detection
+├── tts_handler.py      # Agent audio control
 config/
-├── settings.py # Configurable parameters
-main.py # Demo entry point
-
----
-
-
----
+├── settings.py         # Configurable parameters
+main.py                 # Demo entry point
+```
 
 ## Why This Approach Works
 - Avoids modifying VAD or STT internals
@@ -66,3 +62,4 @@ main.py # Demo entry point
 python main.py
 [AGENT] Speaking...
 [AGENT] Speech stopped.
+
