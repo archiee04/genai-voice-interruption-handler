@@ -1,16 +1,17 @@
 Gen-AI Voice Interruption Handler
 
 Overview
-Real-time voice agents often suffer from false interruptions because Voice Activity Detection (VAD) triggers before Speech-to-Text (STT) completes. Passive backchannels like “yeah” or “okay” unintentionally stop the agent mid-response.
 
+Real-time voice agents often suffer from false interruptions because Voice Activity Detection (VAD) triggers before Speech-to-Text (STT) completes. Passive backchannels like “yeah” or “okay” unintentionally stop the agent mid-response.
 This project implements semantic interruption handling by validating user intent after transcription instead of reacting immediately to sound detection.
 
 Key Insight
-VAD detects sound, not intent.
 
-Interrupt decisions should be made only after semantic validation of the user’s speech.
+1. VAD detects sound, not intent.
+2. Interrupt decisions should be made only after semantic validation of the user’s speech.
 
 Solution
+
 The system introduces a lightweight interruption buffer:
 
 1. VAD flags a potential interruption when user speech is detected  
@@ -57,5 +58,6 @@ Expected output:
 
 [AGENT] Speaking...
 [AGENT] Speech stopped.
+
 
 
